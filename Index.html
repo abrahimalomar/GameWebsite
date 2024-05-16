@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+ 
+  
+<!-- Form -->
+<form id="form" class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+
+     
+      <div class="form-group">
+        <label for="playerName">Enter Name:</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your Name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="Selectlevel">Select level:</label>
+        <select class="form-control" id="level" required>
+          <option value="">Select Level</option>
+          <option value="1">level 1</option>
+          <option value="2">level 2</option>
+          <option value="3">level 3</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="duration">Enter the duration in seconds you wish to play:</label>
+        <input type="number" class="form-control" id="duration" placeholder="Enter the time" required>
+      </div>
+      
+      <div class="form-group">
+        <button type="button" class="btn btn-success btn-block" onclick="startGame()">Start Game</button>
+      </div>
+
+      <!-- Error Message -->
+      <div id="massage" class="text-center mt-4">
+        
+      </div>
+
+    
+    </div>
+  </div>
+</form>
+
+
+<!-- The container containing the balls that is shown to the player -->
+<div id="container" style="display: none;"  class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div id="gameArea" class="text-center mb-4">
+        
+        </div>
+        <!--Show Remaining time-->
+        <div id="timer" class="text-right">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--show  statistics -->
+<div  id="statistics"  class="container"  style="display: none;">
+  <div class="card mt-5 text-center">
+    <div class="card-header bg-success">
+      <h2 class="text-white">statistics</h2>
+    </div>
+    <div class="card-body">
+      <div class="mt-3">
+    
+
+         <h5><strong>Name:</strong> <span id="fullName"></span></h5>
+      
+        <h5><strong>True Answers:</strong> <span id="trueAnswers"></span></h5>
+        <h5><strong>False Answers:</strong> <span id="falseAnswers"></span></h5>
+
+        <h5><strong>max Circles:</strong> <span id="maxCircles"></span></h5>
+        <h5><strong>duration:</strong> <span id="durationDisplay"></span></h5> 
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+<script src="assets/Js/audio.js"></script>
+<script src="assets/Js/gamevariables.js"></script>
+<script src="assets/Js/main.js"></script>
+<script src="assets/Js/comparison.js"></script>
+<script src="assets/Js/randomNumber.js"></script>
+<script src="assets/Js/calculateTimeAndRadiusByLevel.js"></script>
+<script src="assets/Js/statistics.js"></script>
+</body>
+</html>
