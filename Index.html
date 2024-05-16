@@ -7,6 +7,15 @@
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/style.css">
+  <style>
+    /* Add your responsive CSS here */
+    @media (max-width: 768px) {
+      #gameArea {
+        width: 100%;
+        max-width: 500px;
+      }
+    }
+  </style>
 </head>
 <body>
  
@@ -51,22 +60,20 @@
   </div>
 </form>
 
-
 <!-- The container containing the balls that is shown to the player -->
 <div id="container" style="display: none;"  class="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <div id="gameArea" class="text-center mb-4">
-        
-        </div>
-        <!--Show Remaining time-->
-        <div id="timer" class="text-right">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div id="gameArea" class="text-center mb-4">
+      
+      </div>
+      <!--Show Remaining time-->
+      <div id="timer" class="text-right">
 
-        </div>
       </div>
     </div>
   </div>
-
+</div>
 
   <!--show  statistics -->
 <div  id="statistics"  class="container"  style="display: none;">
